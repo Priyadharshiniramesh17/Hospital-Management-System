@@ -1,0 +1,34 @@
+.about-us-section {
+  background: #f9f9f9;
+}
+
+.about-img {
+  max-width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.section-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.section-header p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.about-list li {
+  font-size: 1rem;
+  color: #333;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}

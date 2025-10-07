@@ -1,0 +1,90 @@
+.documentation-section {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+}
+
+.documentation-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s, border-color 0.3s;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.documentation-item img {
+ height: 150px;
+  width: auto; /* keep proportions */
+  margin-bottom: 16px;
+  transition: transform 0.3s ease; /* smooth zoom */
+}
+
+.documentation-item:hover img {
+  transform: scale(1.15); /* zoom in on hover */
+}
+
+.documentation-item h6 {
+  font-size: 1.1rem;
+  font-weight: 800;
+  margin-bottom: 12px;
+  color: #222;
+}
+
+.documentation-item p {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+  max-height: 3rem; /* truncated initially */
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0.8;
+}
+
+/* Active card highlight */
+.documentation-item.active-card {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  border-color: #007bff;
+}
+
+.documentation-item.active-card p {
+  max-height: 10rem; /* expand description */
+  opacity: 1;
+}
+
+/* Hover effect for desktop */
+.documentation-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  p {
+    max-height: 10rem;
+    opacity: 1;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .documentation-item {
+    margin-bottom: 20px;
+  }
+  .documentation-item img {
+    height: 180px; /* slightly smaller for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .documentation-item img {
+    height: 150px; /* smaller on medium screens */
+  }
+}
+
+@media (max-width: 576px) {
+  .documentation-item {
+    padding: 16px;
+  }
+  .documentation-item img {
+    height: 120px; /* smaller on mobile */
+  }
+}
