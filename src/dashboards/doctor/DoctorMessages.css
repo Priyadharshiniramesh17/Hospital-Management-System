@@ -1,0 +1,308 @@
+/* ============================= */
+/* Main container */
+/* ============================= */
+.doctor-mail {
+  display: flex;
+  height: 85vh;
+  margin: 2rem;
+  margin-left: 300px;
+  margin-top: 100px;
+  background: #f8fafc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+.doctor-mail.dark {
+  background: #1e272e;
+  color: #f1f5f9;
+}
+
+/* ============================= */
+/* Sidebar */
+/* ============================= */
+.mail-sidebar {
+  width: 20%;
+  background: #ffffff;
+  border-right: 1px solid #e5e7eb;
+  padding: 1rem;
+  transition: background 0.3s;
+}
+
+.doctor-mail.dark .mail-sidebar {
+  background: #2f3640;
+  border-color: #444;
+}
+
+.mail-sidebar h3 {
+  margin-bottom: 1rem;
+}
+
+.mail-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mail-sidebar li {
+  padding: 0.6rem 0;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.mail-sidebar li:hover {
+  background: #e0f2fe;
+}
+
+.doctor-mail.dark .mail-sidebar li:hover {
+  background: #3b3b98;
+}
+
+/* Compose Button */
+.compose-btn {
+  display: block;
+  width: 100%;
+  background: #10b981;
+  color: white;
+  border: none;
+  padding: 0.6rem 0;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+
+.compose-btn:hover {
+  background: #059669;
+}
+
+.doctor-mail.dark .compose-btn {
+  background: #06b6d4;
+}
+
+.doctor-mail.dark .compose-btn:hover {
+  background: #0284c7;
+}
+
+/* ============================= */
+/* Mail List */
+/* ============================= */
+.mail-list {
+  width: 30%;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+.mail-item {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.mail-item.active {
+  background: #dbeafe;
+}
+
+.mail-item:hover {
+  background: #f1f5f9;
+}
+
+.doctor-mail.dark .mail-item {
+  border-color: #444;
+}
+
+.doctor-mail.dark .mail-item.active {
+  background: #3b3b98;
+}
+
+.doctor-mail.dark .mail-item:hover {
+  background: #353b48;
+}
+
+.mail-sender {
+  font-weight: bold;
+}
+
+.mail-preview {
+  flex: 1;
+  margin-left: 1rem;
+  color: #64748b;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.doctor-mail.dark .mail-preview {
+  color: #b2bec3;
+}
+
+.mail-date {
+  min-width: 80px;
+  text-align: right;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+/* ============================= */
+/* Mail View */
+/* ============================= */
+.mail-view {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.view-header h3 {
+  margin-bottom: 0.3rem;
+}
+
+.view-header p {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.doctor-mail.dark .view-header p {
+  color: #b2bec3;
+}
+
+.mail-toolbar {
+  margin-top: 10px;
+}
+
+.mail-toolbar button {
+  background: #3b82f6;
+  border: none;
+  color: white;
+  padding: 0.4rem 0.8rem;
+  margin-right: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+
+.mail-toolbar button:hover {
+  background: #2563eb;
+}
+
+.doctor-mail.dark .mail-toolbar button {
+  background: #06b6d4;
+}
+
+.doctor-mail.dark .mail-toolbar button:hover {
+  background: #0284c7;
+}
+
+.view-body {
+  margin-top: 1rem;
+}
+
+.view-empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #64748b;
+}
+
+.doctor-mail.dark .view-empty {
+  color: #b2bec3;
+}
+
+/* ============================= */
+/* Compose Modal */
+/* ============================= */
+.compose-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.compose-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.doctor-mail.dark .compose-content {
+  background: #2f3640;
+  color: #f1f5f9;
+}
+
+.compose-content h3 {
+  margin-bottom: 1rem;
+}
+
+.compose-content label {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+.compose-content input,
+.compose-content textarea {
+  width: 100%;
+  margin-top: 0.2rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.doctor-mail.dark .compose-content input,
+.doctor-mail.dark .compose-content textarea {
+  background: #1e272e;
+  color: #f1f5f9;
+  border-color: #444;
+}
+
+.compose-content textarea {
+  min-height: 100px;
+}
+
+.compose-buttons {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.compose-buttons button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.compose-buttons button:first-child {
+  background: #3b82f6;
+  color: white;
+}
+
+.compose-buttons button:first-child:hover {
+  background: #2563eb;
+}
+
+.compose-buttons button:last-child {
+  background: #ef4444;
+  color: white;
+}
+
+.compose-buttons button:last-child:hover {
+  background: #dc2626;
+}

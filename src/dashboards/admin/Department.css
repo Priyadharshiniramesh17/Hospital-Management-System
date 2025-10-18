@@ -1,0 +1,135 @@
+.department-page {
+  margin-top: 50px;
+  margin-left: 300px;
+  padding: 2rem;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .department-page {
+  background-color: #121212;
+  color: #fff;
+}
+
+.department-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #4682B4, #20b2aa);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.department-header p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+body.dark-mode .department-header p {
+  color: #ccc;
+}
+
+.department-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.department-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.dark-mode .department-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+.department-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 30px rgba(0,0,0,0.2);
+}
+
+.department-card h3 {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+body.dark-mode .department-card h3 {
+  color: #fff;
+}
+
+.department-card p {
+  margin: 4px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+body.dark-mode .department-card p {
+  color: #ccc;
+}
+
+.dept-desc {
+  font-style: italic;
+  margin-top: 0.5rem;
+  color: #777;
+}
+
+body.dark-mode .dept-desc {
+  color: #aaa;
+}
+
+.department-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.view-btn {
+  background: linear-gradient(45deg, #4682B4, #20b2aa);
+}
+
+.view-btn:hover {
+  background: linear-gradient(45deg, #356d8a, #1a8c87);
+}
+
+.edit-btn {
+  background: linear-gradient(45deg, #ffa500, #ffb733);
+}
+
+.edit-btn:hover {
+  background: linear-gradient(45deg, #e69500, #ffaa00);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .department-card {
+    padding: 1rem;
+  }
+
+  .department-actions {
+    flex-direction: column;
+  }
+
+  .department-actions button {
+    width: 100%;
+  }
+}

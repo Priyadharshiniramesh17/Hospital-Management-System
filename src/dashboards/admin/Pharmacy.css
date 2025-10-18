@@ -1,0 +1,165 @@
+.pharmacy-page {
+  margin-top: 50px;
+  margin-left: 300px;
+  padding: 2rem;
+  background-color: #f0f4f8;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .pharmacy-page {
+  background-color: #121212;
+  color: #fff;
+}
+
+.pharmacy-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(90deg, #4682B4, #20b2aa);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pharmacy-header p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+body.dark-mode .pharmacy-header p {
+  color: #ccc;
+}
+
+.pharmacy-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.medicine-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+body.dark-mode .medicine-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+}
+
+.medicine-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.2);
+}
+
+.medicine-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.medicine-avatar {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(45deg, #4682B4, #20b2aa);
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.medicine-info p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+body.dark-mode .medicine-info p {
+  color: #ccc;
+}
+
+.stock-bar {
+  width: 100%;
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 4px;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+body.dark-mode .stock-bar {
+  background-color: #333;
+}
+
+.stock-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #20b2aa, #4682B4);
+  border-radius: 4px;
+  transition: width 0.5s ease-in-out;
+}
+
+.medicine-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  color: #fff;
+  font-size: 0.9rem;
+  transition: 0.3s;
+}
+
+.view-btn {
+  background: linear-gradient(45deg, #20b2aa, #4682B4);
+}
+
+.view-btn:hover {
+  background: linear-gradient(45deg, #1a8c87, #356d8a);
+}
+
+.edit-btn {
+  background: linear-gradient(45deg, #ffa500, #ffb84d);
+}
+
+.edit-btn:hover {
+  background: linear-gradient(45deg, #e69500, #ff9933);
+}
+
+.delete-btn {
+  background: linear-gradient(45deg, #ff4d4f, #ff6a6b);
+}
+
+.delete-btn:hover {
+  background: linear-gradient(45deg, #d93637, #ff5254);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .medicine-card {
+    padding: 1rem;
+  }
+
+  .medicine-actions {
+    flex-direction: column;
+  }
+
+  .medicine-actions button {
+    width: 100%;
+  }
+}

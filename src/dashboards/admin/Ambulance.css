@@ -1,0 +1,200 @@
+/* ============================= */
+/* Main Ambulance Page */
+/* ============================= */
+.ambulance-page {
+  margin-top: 50px;
+  margin-left: 300px;
+  padding: 2rem;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .ambulance-page {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* ============================= */
+/* Header Section */
+/* ============================= */
+.ambulance-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.ambulance-header p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+body.dark-mode .ambulance-header p {
+  color: #ccc;
+}
+
+/* ============================= */
+/* Ambulance Cards Grid */
+/* ============================= */
+.ambulance-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ============================= */
+/* Individual Ambulance Card */
+/* ============================= */
+.ambulance-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ambulance-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .ambulance-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================= */
+/* Avatar Circle */
+/* ============================= */
+.ambulance-avatar {
+  width: 60px;
+  height: 60px;
+  background-color: #4682B4;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* ============================= */
+/* Ambulance Info */
+/* ============================= */
+.ambulance-info h3 {
+  margin: 0;
+  color: #333;
+}
+
+.ambulance-info p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+body.dark-mode .ambulance-info h3 {
+  color: #fff;
+}
+
+body.dark-mode .ambulance-info p {
+  color: #ccc;
+}
+
+/* ============================= */
+/* Status Badge */
+/* ============================= */
+.ambulance-status {
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: capitalize;
+}
+
+.ambulance-status.available {
+  background-color: #4caf50;
+}
+
+.ambulance-status.on-duty {
+  background-color: #20b2aa;
+}
+.ambulance-status.maintenance {
+  background-color: #ffa500;
+}
+
+/* ============================= */
+/* Card Actions Buttons */
+/* ============================= */
+.ambulance-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.view-btn {
+  background-color: #20b2aa;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #1a8c87;
+}
+
+.edit-btn {
+  background-color: #ffa500;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #e69500;
+}
+
+/* ============================= */
+/* No Ambulances Message */
+/* ============================= */
+.no-ambulances {
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+  margin-top: 2rem;
+}
+
+body.dark-mode .no-ambulances {
+  color: #ccc;
+}
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+@media (max-width: 768px) {
+  .ambulance-page {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .ambulance-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ambulance-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}

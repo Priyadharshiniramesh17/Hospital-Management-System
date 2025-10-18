@@ -1,0 +1,216 @@
+/* ============================= */
+/* Doctor Top Navbar */
+/* ============================= */
+.doctor-topnavbar {
+  width: 100%;
+  height: 72px;
+  background: linear-gradient(#11837a, #5387a7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem 0 3rem;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar Left */
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-left h1 {
+  font-size: 1.2rem;
+  margin-left: 15px;
+}
+
+/* Navbar Right */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+/* Buttons */
+.hamburger-btn,
+.home-btn,
+.darkmode-btn,
+.notification-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.9rem;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.hamburger-btn:hover,
+.home-btn:hover,
+.darkmode-btn:hover,
+.notification-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Home Button */
+.home-btn {
+  font-weight: 600;
+  /* background: #00b894; */
+  color: #fff;
+  transition: background 0.3s;
+}
+
+
+/* Notification Dropdown */
+.notification-wrapper {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: white;
+  font-size: 0.6rem;
+  font-weight: bold;
+  padding: 2px 5px;
+  border-radius: 50%;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: #fff;
+  color: #333;
+  min-width: 220px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  overflow: hidden;
+  z-index: 1200;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.notification-item {
+  padding: 0.5rem 0.8rem;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+/* Profile Dropdown */
+.profile-wrapper {
+  position: relative;
+}
+
+.profile-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #4682b4;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.profile-dropdown {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  width: 220px;
+  background: #fff;
+  color: #333;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  padding: 0.5rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.profile-dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile-info strong {
+  font-size: 0.95rem;
+}
+
+.profile-info small {
+  font-size: 0.75rem;
+  color: gray;
+}
+
+.profile-action {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.4rem 0.6rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.profile-action:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.profile-action.logout {
+  color: red;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .navbar-left h1 {
+    font-size: 1rem;
+  }
+
+  .notification-dropdown,
+  .profile-dropdown {
+    width: 180px;
+  }
+
+  .profile-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 0.85rem;
+  }
+
+  .home-btn {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}

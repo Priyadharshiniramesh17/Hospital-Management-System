@@ -1,0 +1,118 @@
+.doctor-dashboard {
+  margin-left: 300px;
+  margin-top: 80px;
+  padding: 2rem;
+  background: #f8fafc;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+.doctor-dashboard h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: #718096;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* Table */
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.appointment-table th,
+.appointment-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+
+.appointment-table th {
+  background: linear-gradient(to right, #007acc, #00b4d8);
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.appointment-table tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+.appointment-table tr:hover {
+  background: #e0f2fe;
+  transition: 0.3s;
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+}
+
+.pages button {
+  background: #e2e8f0;
+  border: none;
+  padding: 6px 12px;
+  margin: 0 4px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pages button:hover {
+  background: #007acc;
+  color: #fff;
+}
+
+.pages .active {
+  background: #007acc;
+  color: white;
+  font-weight: 600;
+}
+
+/* 🌙 Dark Mode */
+.doctor-dashboard.dark {
+  background: #1e272e;
+  color: #f1f5f9;
+}
+
+.doctor-dashboard.dark h2 {
+  color: #f1f5f9;
+}
+
+.doctor-dashboard.dark .appointment-table {
+  background: #2f3640;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+.doctor-dashboard.dark .appointment-table th {
+  background: linear-gradient(to right, #005f99, #00a6c1);
+}
+
+.doctor-dashboard.dark .appointment-table tr:nth-child(even) {
+  background: #353b48;
+}
+
+.doctor-dashboard.dark .appointment-table tr:hover {
+  background: #4b6584;
+}
+
+.doctor-dashboard.dark .pages button {
+  background: #3a3f47;
+  color: #fff;
+}
+
+.doctor-dashboard.dark .pages button:hover {
+  background: #00a8ff;
+}

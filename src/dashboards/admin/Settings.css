@@ -1,0 +1,102 @@
+.settings-page {
+  margin-top: 50px;
+  margin-left: 300px;
+  padding: 2rem;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .settings-page {
+  background-color: #121212;
+  color: #fff;
+}
+
+.settings-page h1 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.settings-section {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .settings-section {
+  background-color: #1e1e1e;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.settings-section h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+body.dark-mode .settings-section h2 {
+  color: #fff;
+}
+
+.profile-form label,
+.password-form label {
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+body.dark-mode .profile-form label,
+body.dark-mode .password-form label {
+  color: #ccc;
+}
+
+.profile-form input,
+.password-form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border 0.3s;
+}
+
+body.dark-mode .profile-form input,
+body.dark-mode .password-form input {
+  background-color: #2a2a2a;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.save-btn {
+  margin-top: 1rem;
+  background-color: #4682B4;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.save-btn:hover {
+  background-color: #5aa0d1;
+}
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.darkmode-toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+}

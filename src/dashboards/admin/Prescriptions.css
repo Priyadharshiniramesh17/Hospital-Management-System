@@ -1,0 +1,249 @@
+/* ============================= */
+/* Main Prescriptions Page */
+/* ============================= */
+.prescriptions-page {
+  margin-top: 50px;
+  margin-left: 300px;
+  padding: 2rem;
+  background-color: #f4f6f8;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.dark-mode .prescriptions-page {
+  background-color: #121212;
+  color: #fff;
+}
+
+/* ============================= */
+/* Header Section */
+/* ============================= */
+.prescriptions-header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.prescriptions-header p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+body.dark-mode .prescriptions-header p {
+  color: #ccc;
+}
+
+/* ============================= */
+/* Filter Section */
+/* ============================= */
+.prescriptions-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.prescriptions-filter input,
+.prescriptions-filter select {
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 0.95rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.prescriptions-filter input:focus,
+.prescriptions-filter select:focus {
+  border-color: #4682b4;
+}
+
+body.dark-mode .prescriptions-filter input,
+body.dark-mode .prescriptions-filter select {
+  background-color: #1e1e1e;
+  border-color: #555;
+  color: #fff;
+}
+
+/* ============================= */
+/* Prescription Cards Grid */
+/* ============================= */
+.prescriptions-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+/* ============================= */
+/* Individual Prescription Card */
+/* ============================= */
+.prescription-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prescription-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .prescription-card {
+  background-color: #1e1e1e;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================= */
+/* Avatar Circle */
+/* ============================= */
+.prescription-avatar {
+  width: 60px;
+  height: 60px;
+  background-color: #4682B4;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* ============================= */
+/* Prescription Info */
+/* ============================= */
+.prescription-info h3 {
+  margin: 0;
+  color: #333;
+}
+
+.prescription-info p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+body.dark-mode .prescription-info h3 {
+  color: #fff;
+}
+
+body.dark-mode .prescription-info p {
+  color: #ccc;
+}
+
+/* ============================= */
+/* Status Badge */
+/* ============================= */
+.prescription-status {
+  margin-top: 1rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.prescription-status.active {
+  background-color: #20b2aa;
+}
+
+.prescription-status.completed {
+  background-color: #4caf50;
+}
+
+.prescription-status.pending {
+  background-color: #ffa500;
+}
+
+/* ============================= */
+/* Card Actions Buttons */
+/* ============================= */
+.prescription-actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.btn {
+  flex: 1;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+.view-btn {
+  background-color: #20b2aa;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #1a8c87;
+}
+
+.edit-btn {
+  background-color: #ffa500;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #e69500;
+}
+
+.delete-btn {
+  background-color: #ff4d4f;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #d93637;
+}
+
+/* ============================= */
+/* No Prescriptions Message */
+/* ============================= */
+.no-prescriptions {
+  text-align: center;
+  font-size: 1rem;
+  color: #777;
+  margin-top: 2rem;
+}
+
+body.dark-mode .no-prescriptions {
+  color: #ccc;
+}
+
+/* ============================= */
+/* Responsive Design */
+/* ============================= */
+@media (max-width: 768px) {
+  .prescriptions-page {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .prescriptions-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .prescriptions-filter {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .prescription-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
+}

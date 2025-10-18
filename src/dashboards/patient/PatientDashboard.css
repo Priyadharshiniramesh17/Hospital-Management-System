@@ -1,0 +1,38 @@
+.patient-dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.patient-dashboard-body {
+  display: flex;
+  flex: 1;
+  min-height: 0; /* ensures scrollable content */
+}
+
+/* Sidebar styling */
+.patient-dashboard-body > div {
+  width: 250px; /* sidebar width */
+  /* background-color: #11837a;  optional: patient theme */
+  color: white;
+}
+
+/* Main content styling */
+.patient-dashboard-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8fafc;
+  overflow-y: auto;
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .patient-dashboard-body {
+    flex-direction: column;
+  }
+
+  .patient-dashboard-body > div {
+    width: 100%;
+  }
+}

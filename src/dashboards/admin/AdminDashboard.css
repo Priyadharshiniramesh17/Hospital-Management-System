@@ -1,0 +1,19 @@
+.admin-dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.admin-dashboard-body {
+  display: flex;
+  flex: 1;
+  min-height: 0; /* ensures scrollable content */
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .admin-dashboard-body {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,181 @@
+/* =========================
+   Doctor Dashboard CSS
+========================= */
+
+/* Main Dashboard */
+.doctor-dashboard {
+  margin-top: 100px;
+  margin-left: 300px;
+  padding: 2rem;
+  min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  color: #333;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Dark Mode */
+body.dark-mode .doctor-dashboard {
+  background: #1e272e;
+  color: #dfe6e9;
+}
+
+/* =========================
+   Chart Cards
+========================= */
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.chart-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.1), -6px -6px 12px rgba(255,255,255,0.7);
+  transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+}
+
+.chart-card:hover { transform: translateY(-5px); }
+
+body.dark-mode .chart-card {
+  background: #2f3640;
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.5), -6px -6px 12px rgba(60,60,60,0.3);
+}
+
+.chart-card h3 { margin-bottom: 0.5rem; font-size: 1.1rem; }
+.percent.positive { color: #00b894; }
+.percent.negative { color: #d63031; }
+.week-count { font-size: 0.85rem; color: #888; }
+
+/* =========================
+   Latest Appointments (Single Box)
+========================= */
+.latest-appointments {
+  margin-bottom: 2rem;
+}
+
+.appointment-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #f7f9fc;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.05), -4px -4px 10px rgba(255,255,255,0.7);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.appointment-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.1), -4px -4px 12px rgba(255,255,255,0.5);
+}
+
+.patient-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.appointment-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.patient-name { font-weight: 600; font-size: 0.95rem; }
+.booking-date { font-size: 0.8rem; color: #666; }
+
+body.dark-mode .appointment-item {
+  background: #3b3b3b;
+  box-shadow: 4px 4px 12px rgba(0,0,0,0.5), -4px -4px 12px rgba(60,60,60,0.3);
+}
+
+/* =========================
+   Patient Reviews Carousel
+========================= */
+.reviews-section { margin-bottom: 2rem; }
+
+.review-carousel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.review-card {
+  flex: 1;
+  background: #dfdfdf;
+  padding: 1rem;
+  /* border-radius: 12px; */
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.05), -6px -6px 12px rgba(255,255,255,0.6);
+  transition: transform 0.5s ease, background 0.3s, box-shadow 0.3s;
+  min-height: 100px;
+}
+
+.review-card p { font-size: 0.9rem; color: #333; line-height: 1.4; }
+.review-card small { display: block; text-align: right; margin-top: 0.5rem; color: #888; }
+
+body.dark-mode .review-card {
+  background: #2f3640;
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.5), -6px -6px 12px rgba(60,60,60,0.3);
+}
+
+body.dark-mode .review-card p { color: #dfe6e9; }
+body.dark-mode .review-card small { color: #aaa; }
+
+/* =========================
+   Info Cards
+========================= */
+.info-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.info-card {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 6px 6px 12px rgba(0,0,0,0.1), -6px -6px 12px rgba(255,255,255,0.7);
+  transition: transform 0.2s, background 0.3s, box-shadow 0.3s;
+}
+
+.info-card:hover { transform: translateY(-5px); }
+
+.info-card h4 { margin-bottom: 0.5rem; }
+.info-card p { font-size: 0.85rem; color: #555; margin-bottom: 0.8rem; }
+
+.info-card button {
+  padding: 0.4rem 0.8rem;
+  background: #11837a;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.3s;
+}
+
+.info-card button:hover { background: #0f6c66; }
+
+body.dark-mode .info-card { background: #2f3640; box-shadow: 6px 6px 12px rgba(0,0,0,0.5), -6px -6px 12px rgba(60,60,60,0.3); }
+body.dark-mode .info-card p { color: #dfe6e9; }
+body.dark-mode .info-card button { background: #1abc9c; }
+body.dark-mode .info-card button:hover { background: #16a085; }
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 992px) {
+  .doctor-dashboard { margin-left: 0; padding: 1rem; }
+}
+
+@media (max-width: 768px) {
+  .appointment-item { flex-direction: column; align-items: center; text-align: center; }
+  .appointment-info { align-items: center; }
+  .review-card { min-height: auto; }
+}

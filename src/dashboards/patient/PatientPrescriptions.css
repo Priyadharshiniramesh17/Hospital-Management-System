@@ -1,0 +1,123 @@
+.patient-prescriptions-page {
+  padding: 2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  min-height: 100vh;
+  margin-left: 300px;
+  margin-top: 100px;
+}
+
+.patient-prescriptions-page h2 {
+  color: #11837a;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Search Bar */
+.search-bar {
+  margin-bottom: 1.5rem;
+}
+
+.search-bar input {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.2s;
+}
+
+.search-bar input:focus {
+  border-color: #11837a;
+  box-shadow: 0 0 5px rgba(17,131,122,0.3);
+}
+
+/* Table */
+.prescriptions-table {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.table-header, .table-row {
+  display: grid;
+  grid-template-columns: 2fr 2fr 2fr 2fr 1fr;
+  padding: 0.8rem 1rem;
+  align-items: center;
+}
+
+.table-header {
+  background-color: #11837a;
+  color: #fff;
+  font-weight: 600;
+}
+
+.table-row {
+  border-top: 1px solid #eee;
+  color: #333;
+  transition: background 0.2s;
+}
+
+.table-row:hover {
+  background-color: rgba(17,131,122,0.1);
+}
+
+/* Action Buttons */
+.action-buttons button {
+  padding: 0.3rem 0.7rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #fff;
+  background-color: #11837a;
+  transition: 0.2s;
+}
+
+.action-buttons button:hover {
+  background-color: #0f6c66;
+}
+
+/* No results */
+.no-results {
+  text-align: center;
+  padding: 1rem;
+  color: #777;
+}
+
+/* Responsive Card Layout */
+@media (max-width: 768px) {
+  .table-header {
+    display: none;
+  }
+
+  .table-row {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    margin-bottom: 1rem;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .table-row span {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .action-buttons button {
+    margin-right: 8px;
+    margin-top: 0.5rem;
+  }
+}

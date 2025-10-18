@@ -1,0 +1,64 @@
+.patient-review {
+  margin: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1e3a8a;
+  margin-left: 300px;
+  margin-top: 100px;
+}
+
+.patient-review h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* =====================
+   Review Cards
+===================== */
+.review-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.review-card {
+  background: #f8fafc;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.review-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.review-header h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.review-header span {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.review-comment {
+  font-size: 0.85rem;
+  color: #374151;
+  margin-top: 0.5rem;
+}

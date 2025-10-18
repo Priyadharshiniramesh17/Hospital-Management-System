@@ -1,0 +1,184 @@
+:root {
+  --primary-color: #1abc9c;
+  --primary-hover: #16a085;
+  --text-color: #333;
+  --nav-hover-color: #16a085;
+  --header-bg: #fcfcfc;
+}
+
+/* Reset */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  background-color: var(--header-bg);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: box-shadow 0.3s;
+}
+
+.header.sticky-shadow {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Navbar */
+.header-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+
+/* Logo */
+.navbar-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-brand img {
+  height: 70px;
+  width: auto;
+  border-radius: 50%;
+}
+
+/* Desktop Menu */
+.main-nav {
+  display: flex;
+  gap: 55px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-link {
+  font-size: 18px;
+  color: var(--text-color);
+  font-weight: 800;
+  transition: color 0.3s, background 0.3s;
+}
+
+/* Hover effect for desktop links */
+.main-nav .nav-link:hover {
+  color: var(--primary-color);
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/* Active link styling (only bottom border) */
+.nav-link.active {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 2px;
+}
+
+/* Right CTA Button */
+.header-navbar-rht .btn {
+  padding: 8px 16px;
+  border-radius: 5px;
+  font-weight: 500;
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: background 0.3s;
+}
+
+.header-navbar-rht .btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translateY(8px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-8px);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: var(--header-bg);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+  z-index: 999;
+}
+
+.mobile-menu.open {
+  max-height: 500px; /* adjust as needed */
+}
+
+.mobile-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px 20px;
+}
+
+.mobile-menu a {
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  color: var(--text-color);
+  font-weight: 800;
+  padding: 8px 12px;
+  transition: color 0.3s, background 0.3s;
+}
+
+/* Hover effect for mobile menu links */
+.mobile-menu a:hover {
+  color:#16a085;
+  background-color: transparent;
+  border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .main-nav,
+  .header-navbar-rht {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar-brand img {
+    height: 50px;
+  }
+}
